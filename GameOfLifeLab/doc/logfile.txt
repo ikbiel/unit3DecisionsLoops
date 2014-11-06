@@ -1,0 +1,79 @@
+Class documentation
+<---- javadoc command: ---->
+C:\PROGRA~1\Java\JDK17~1.0_6\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.7
+-classpath
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.8.2.jar;H:\GitHub\unit3DecisionsLoops\GameOfLifeLab
+-d
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java
+<---- end of javadoc command ---->
+Loading source file H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java...
+Constructing Javadoc information...
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:1: error: package info.gridworld.actor does not exist
+import info.gridworld.actor.Actor;
+                           ^
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:2: error: package info.gridworld.actor does not exist
+import info.gridworld.actor.ActorWorld;
+                           ^
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:3: error: package info.gridworld.actor does not exist
+import info.gridworld.actor.Rock;
+                           ^
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:4: error: package info.gridworld.grid does not exist
+import info.gridworld.grid.BoundedGrid;
+                          ^
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:5: error: package info.gridworld.grid does not exist
+import info.gridworld.grid.Location;
+                          ^
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:17: error: cannot find symbol
+    private BoundedGrid<Actor> grid;
+            ^
+  symbol:   class BoundedGrid
+  location: class GameOfLife
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:17: error: cannot find symbol
+    private BoundedGrid<Actor> grid;
+                        ^
+  symbol:   class Actor
+  location: class GameOfLife
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:20: error: cannot find symbol
+    private ActorWorld world;
+            ^
+  symbol:   class ActorWorld
+  location: class GameOfLife
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:84: error: cannot find symbol
+    public Actor getActor(int row, int col)
+           ^
+  symbol:   class Actor
+  location: class GameOfLife
+Standard Doclet version 1.7.0_60
+Building tree for all the packages and classes...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\GameOfLife.html...
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:37: warning - @post is an unknown tag.
+H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:84: warning - @pre is an unknown tag.
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-frame.html...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-summary.html...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-frame.html...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-noframe.html...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\index.html...
+Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\stylesheet.css...
+11 warnings
