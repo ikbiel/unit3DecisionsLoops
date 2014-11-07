@@ -44,15 +44,16 @@ public class GameOfLifeTest
     public void testInitialState()
     {
         /* expected pattern for initial state
+         * Filled triangle
          *  (X: alive; -: dead)
          * 
-         *    0 1 2 3 4
-         *  0 - - X - -
-         *  1 - - - - -
-         *  2 X X - - -
-         *  3 - - - - -
-         *  4 - - - - -
-         *  
+         *    0 1 2 3 4 5
+         *  0 - - - - - -
+         *  1 - - - - - -
+         *  2 - - -X- - -
+         *  3 - - X X - - 
+         *  4 - X X X X -
+         *  5 X X X X X X
          */
         
         GameOfLife game = new GameOfLife();
@@ -79,6 +80,25 @@ public class GameOfLifeTest
                 }
             }
         }
+    }
+
+    @Test
+    public void testFinalState()
+    {
+        /* verify that the actual pattern matches the expected pattern after 3 generations 
+         * Pattern: open circle
+           *
+           *   0 1 2 3 4 5
+           * 0 - - - X - -
+           * 1 - - X - X -
+           * 2 - X - - - X
+           * 3 - X - - - X
+           * 4 - - X X X -
+           * 5 - - - - - -
+           *
+         */
+        
+        // ...
     }
 }
 
