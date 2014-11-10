@@ -45,7 +45,7 @@ Nonfunctional Requirements:
    * live cells: green
    * dead cells: blank/white
    * Patterns: chosen in code
-   * beginning pattern: triangle (base is 10 units, - 2 every row up)
+   * beginning pattern: sideways triangle (base is 10 units, - 2 every row up)
    * middle patterns:
      * glider; two corners of triangle exit the grid
      * block + beehive
