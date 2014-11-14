@@ -12,9 +12,9 @@ C:\PROGRA~1\Java\JDK17~1.0_6\bin\javadoc.exe
 -source
 1.7
 -classpath
-C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.8.2.jar;H:\GitHub\unit3DecisionsLoops\GameOfLifeLab
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.8.2.jar;\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab
 -d
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc
 -encoding
 UTF-8
 -charset
@@ -23,57 +23,52 @@ UTF-8
 C:\Program Files\BlueJ\lib\bjdoclet.jar
 -doclet
 bluej.doclet.doclets.formats.html.HtmlDoclet
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java
 <---- end of javadoc command ---->
-Loading source file H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java...
+Loading source file \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java...
 Constructing Javadoc information...
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:1: error: package info.gridworld.actor does not exist
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:1: error: package info.gridworld.actor does not exist
 import info.gridworld.actor.Actor;
                            ^
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:2: error: package info.gridworld.actor does not exist
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:2: error: package info.gridworld.actor does not exist
 import info.gridworld.actor.ActorWorld;
                            ^
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:3: error: package info.gridworld.actor does not exist
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:3: error: package info.gridworld.actor does not exist
 import info.gridworld.actor.Rock;
                            ^
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:4: error: package info.gridworld.grid does not exist
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:4: error: package info.gridworld.grid does not exist
+import info.gridworld.grid.Grid;
+                          ^
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:5: error: package info.gridworld.grid does not exist
 import info.gridworld.grid.BoundedGrid;
                           ^
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:5: error: package info.gridworld.grid does not exist
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:6: error: package info.gridworld.grid does not exist
 import info.gridworld.grid.Location;
                           ^
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:17: error: cannot find symbol
-    private BoundedGrid<Actor> grid;
-            ^
-  symbol:   class BoundedGrid
-  location: class GameOfLife
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:17: error: cannot find symbol
-    private BoundedGrid<Actor> grid;
-                        ^
-  symbol:   class Actor
-  location: class GameOfLife
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:20: error: cannot find symbol
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:18: error: cannot find symbol
     private ActorWorld world;
             ^
   symbol:   class ActorWorld
   location: class GameOfLife
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:84: error: cannot find symbol
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:238: error: cannot find symbol
     public Actor getActor(int row, int col)
            ^
   symbol:   class Actor
   location: class GameOfLife
 Standard Doclet version 1.7.0_60
 Building tree for all the packages and classes...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\GameOfLife.html...
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:37: warning - @post is an unknown tag.
-H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:84: warning - @pre is an unknown tag.
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-frame.html...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-summary.html...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\constant-values.html...
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\GameOfLife.html...
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:30: warning - @post is an unknown tag.
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:195: warning - @pre is an unknown tag.
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:195: warning - @post is an unknown tag.
+\\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:238: warning - @pre is an unknown tag.
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-frame.html...
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-summary.html...
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\constant-values.html...
 Building index for all the packages and classes...
 Building index for all classes...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-frame.html...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-noframe.html...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\index.html...
-Generating H:\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\stylesheet.css...
-11 warnings
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-frame.html...
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-noframe.html...
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\index.html...
+Generating \\NNHSSRV2\IKBiel$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\stylesheet.css...
+12 warnings

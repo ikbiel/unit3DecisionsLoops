@@ -41,20 +41,20 @@ Nonfunctional Requirements:
 
     My Requirements:
 
-   * grid: 100x100 units
-   * live cells: green
-   * dead cells: blank/white
-   * Patterns: chosen in code
-   * beginning pattern: sideways triangle (base is 10 units, - 2 every row up)
+   * grid: 70x70 units
+   * live cells: black dots
+   * dead cells: blank/white cells
+   * Patterns: random
+   * beginning pattern: triangle (base is 10 units, - 2 every row up)
    * middle patterns:
-     * glider; two corners of triangle exit the grid
-     * block + beehive
-       * blinker
-       * toad 
-   * end pattern: open circle
-   * length: 1 iteration, not forever
+       * circle
+       * beehive
+       * hello kitty
+       * boats
+   * end pattern: two circles (top and bottom)/two boats (right and left)
+   * length: 8 generations; not forever
      * does not prompt user to continue
-   * time interval between generations: half a second (.5 sec)
+   * time interval between generations: one second (.5 sec)
    * edge cases: actors who leave screen do NOT wrap around; they are gone
 
 

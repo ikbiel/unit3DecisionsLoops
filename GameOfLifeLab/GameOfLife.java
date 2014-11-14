@@ -4,6 +4,7 @@ import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
+import java.util.ArrayList;
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -60,127 +61,127 @@ public class GameOfLife
         
         // first row of triangle
         Rock rock1 = new Rock();
-        Location loc1 = new Location(31, 30);
+        Location loc1 = new Location(30, 31);
         grid.put(loc1, rock1);
         
         Rock rock2 = new Rock();
-        Location loc2 = new Location(32, 30);
+        Location loc2 = new Location(30, 32);
         grid.put(loc2, rock2);
         
         Rock rock3 = new Rock();
-        Location loc3 = new Location(33, 30);
+        Location loc3 = new Location(30, 33);
         grid.put(loc3, rock3);
         
         Rock rock4 = new Rock();
-        Location loc4 = new Location(34, 30);
+        Location loc4 = new Location(30, 34);
         grid.put(loc4, rock4);
         
         Rock rock5 = new Rock();
-        Location loc5 = new Location(35, 30);
+        Location loc5 = new Location(30, 35);
         grid.put(loc5, rock5);
         
         Rock rock6 = new Rock();
-        Location loc6 = new Location(36, 30);
+        Location loc6 = new Location(30, 36);
         grid.put(loc6, rock6);
         
         Rock rock7 = new Rock();
-        Location loc7 = new Location(37, 30);
+        Location loc7 = new Location(30, 37);
         grid.put(loc7, rock7);
         
         Rock rock8 = new Rock();
-        Location loc8 = new Location(38, 30);
+        Location loc8 = new Location(30, 38);
         grid.put(loc8, rock8);
         
         Rock rock9 = new Rock();
-        Location loc9 = new Location(39, 30);
+        Location loc9 = new Location(30, 39);
         grid.put(loc9, rock9);
         
         Rock rock10 = new Rock();
-        Location loc10 = new Location(40, 30);
+        Location loc10 = new Location(30, 40);
         grid.put(loc10, rock10);
         
         // second row of triangles
         Rock rock11 = new Rock();
-        Location loc11 = new Location(32, 29);
+        Location loc11 = new Location(29, 32);
         grid.put(loc11, rock11);
         
         Rock rock12 = new Rock();
-        Location loc12 = new Location(33, 29);
+        Location loc12 = new Location(29, 33);
         grid.put(loc12, rock12);
         
         Rock rock13 = new Rock();
-        Location loc13 = new Location(34, 29);
+        Location loc13 = new Location(29, 34);
         grid.put(loc13, rock13);
         
         Rock rock14 = new Rock();
-        Location loc14 = new Location(35, 29);
+        Location loc14 = new Location(29, 35);
         grid.put(loc14, rock14);
         
         Rock rock15 = new Rock();
-        Location loc15 = new Location(36, 29);
+        Location loc15 = new Location(29, 36);
         grid.put(loc15, rock15);
         
         Rock rock16 = new Rock();
-        Location loc16 = new Location(37, 29);
+        Location loc16 = new Location(29, 37);
         grid.put(loc16, rock16);
         
         Rock rock17 = new Rock();
-        Location loc17 = new Location(38, 29);
+        Location loc17 = new Location(29, 38);
         grid.put(loc17, rock17);
         
         Rock rock18 = new Rock();
-        Location loc18 = new Location(39, 29);
+        Location loc18 = new Location(29, 39);
         grid.put(loc18, rock18);
         
         // third row of triangle
         Rock rock19 = new Rock();
-        Location loc19 = new Location(33, 28);
+        Location loc19 = new Location(28, 33);
         grid.put(loc19, rock19);
         
         Rock rock20 = new Rock();
-        Location loc20 = new Location(34, 28);
+        Location loc20 = new Location(28, 34);
         grid.put(loc20, rock20);
         
         Rock rock21 = new Rock();
-        Location loc21 = new Location(35, 28);
+        Location loc21 = new Location(28, 35);
         grid.put(loc21, rock21);
         
         Rock rock22 = new Rock();
-        Location loc22 = new Location(36, 28);
+        Location loc22 = new Location(28, 36);
         grid.put(loc22, rock22);
         
         Rock rock23 = new Rock();
-        Location loc23 = new Location(37, 28);
+        Location loc23 = new Location(28, 37);
         grid.put(loc23, rock23);
         
         Rock rock24 = new Rock();
-        Location loc24 = new Location(38, 28);
+        Location loc24 = new Location(28, 38);
         grid.put(loc24, rock24);
         
         // fourth row of triangle
         Rock rock25 = new Rock();
-        Location loc25 = new Location(34, 27);
+        Location loc25 = new Location(27, 34);
         grid.put(loc25, rock25);
         
         Rock rock26 = new Rock();
-        Location loc26 = new Location(35, 27);
+        Location loc26 = new Location(27, 35);
         grid.put(loc26, rock26);
         
         Rock rock27 = new Rock();
-        Location loc27 = new Location(36, 27);
+        Location loc27 = new Location(27, 36);
         grid.put(loc27, rock27);
         
         Rock rock28 = new Rock();
-        Location loc28 = new Location(37, 27);
+        Location loc28 = new Location(27, 37);
         grid.put(loc28, rock28);
         
         // fifth row of triangle
         Rock rock29 = new Rock();
-        Location loc29 = new Location(35, 26);
+        Location loc29 = new Location(26, 35);
         grid.put(loc29, rock29);
         
         Rock rock30 = new Rock();
-        Location loc30 = new Location(36, 26);
+        Location loc30 = new Location(26, 36);
         grid.put(loc30, rock30);
     }
 
@@ -200,57 +201,43 @@ public class GameOfLife
         
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
-        Grid<Actor> newGrid = world.getGrid();
+        BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
+        // get occupied cells
+        ArrayList<Location> occupied = grid.getOccupiedLocations();
         
         
-        for (int row = 0; row <= 100; row++)
+        for (int row = 0; row < ROWS; row++)
         {
-            for (int column = 0; column <= 100; column++)
+            for (int column = 0; column < COLS; column++)
             {
-                
-                
-                
-                
-                int neighbors = 0;
-                boolean check = Actor.getAdjacentLocation(North);
-                if (check == true)
+                Location loc0 = new Location(row, column);
+                ArrayList<Actor> neighbors = grid.getNeighbors(loc0);
+                Rock rock0 = new Rock ();
+                // if actor is dead and has three neighbors: comes alive
+                if (!(occupied.contains(loc0)) )
                 {
-                    neighbors += 1;
+                    if (neighbors.size() == 3)
+                    {
+                        newGrid.put(loc0, rock0);
+                    }
                 }
-                boolean check = Actor.getAdjacentLocation(East);
-                if (check == true)
-                {
-                    neighbors += 1;
-                }
-                boolean check = Actor.getAdjacentLocation(South);
-                if (check == true)
-                {
-                    neighbors += 1;
-                }
-                boolean check = Actor.getAdjacentLocation(West);
-                if (check == true)
-                {
-                    neighbors += 1;
-                }
-                
-                if (neighbor < 2)
-                {
-                    Actor.removeSelfFromGrid();
-                }
-                else if (neighbor <=3)
-                {
-                    Actor.putSelfInGrid();
-                }
+                // if actor is alive and has 2-3 actors: lives - otherwise it dies
                 else
                 {
-                    Actor.removeSelfFromGrid();
-                }
-            }
-        }
-        // Actor.putSelfInGrid
-        // Actor.removeSelfFromGrid
-        // Location.getAdjacentLocation
-    }
+                   if (neighbors.size() < 2)
+                   {
+                       newGrid.remove(loc0);
+                   }
+                   else if (neighbors.size() <= 3)
+                   {
+                       newGrid.put(loc0, rock0);
+                    }
+                 }
+            }         
+        }  
+        
+        world.setGrid(newGrid);
+    }      
     
     /**
      * Returns the actor at the specified row and column. Intended to be used for unit testing.
@@ -295,6 +282,21 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
+        for (int gens = 0; gens < 9; gens++)
+        {
+            game.createNextGeneration();
+            try 
+            {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException e)
+            {
+                Thread.currentThread().interrupt();
+
+            }
+            
+        }
+
     }
 
 }

@@ -47,30 +47,33 @@ public class GameOfLifeTest
          * Filled triangle
          *  (X: alive; -: dead)
          * 
-         *    0 1 2 3 4 5
-         *  0 - - - - - -
-         *  1 - - - - - -
-         *  2 - - -X- - -
-         *  3 - - X X - - 
-         *  4 - X X X X -
-         *  5 X X X X X X
-         */
+         * // pick different region
+         * 
+         *     30 31 32 33 34 
+         *   25 -  -  -  -  -
+         *   26 -  -  -  -  -
+         *   27 -  -  -  -  X
+         *   28 -  -  -  X  X
+         *   29 -  -  X  X  X
+         */ 
         
         GameOfLife game = new GameOfLife();
-        final int ROWS = game.getNumRows();
-        final int COLS = game.getNumCols();
-
-        for(int row = 0; row < ROWS; row++)
+        //update conditionals
+        for(int row = 25; row < 30; row++)
         {
-            for(int col = 0; col < COLS; col++)
+            for(int col = 30; col < 35; col++)
             {
                 // in this example, an alive cell has a non-null actor and a dead cell has a null actor
                 Actor cell = game.getActor(row, col);
 
                 // if the cell at the current row and col should be alive, assert that the actor is not null
-                if(     (row == 0 && col == 2) ||
-                        (row == 2 && col == 0) ||
-                        (row == 2 && col == 1))
+                if(     (row == 27 && col == 34) ||
+                        (row == 28 && col == 33) ||
+                        (row == 28 && col == 34) ||
+                        (row == 29 && col == 32) ||
+                        (row == 29 && col == 33) ||
+                        (row == 29 && col == 34) )
+                       
                 {
                     assertNotNull("expected alive cell at (" + row + ", " + col + ")", cell);
                 }
@@ -85,20 +88,55 @@ public class GameOfLifeTest
     @Test
     public void testFinalState()
     {
-        /* verify that the actual pattern matches the expected pattern after 3 generations 
-         * Pattern: open circle
-           *
-           *   0 1 2 3 4 5
-           * 0 - - - X - -
-           * 1 - - X - X -
-           * 2 - X - - - X
-           * 3 - X - - - X
-           * 4 - - X X X -
-           * 5 - - - - - -
-           *
-         */
+        /* expected pattern for final state
+         * Four circles
+         *  (X: alive; -: dead)
+         * 
+         * // pick different region
+         * 
+         *     30 31 32 33 34 
+         *   26 -  -  -  -  -
+         *   27 -  X  -  -  X
+         *   28 X  -  X  -  -
+         *   29 X  X  -  -  -
+         *   30 -  -  -  -  -
+         */ 
         
-        // ...
+        GameOfLife game = new GameOfLife();
+        for (int gens = 0; gens < 9; gens++)
+        {
+            game.createNextGeneration();
+            
+        }
+
+        for(int row = 26; row < 31; row++)
+        {
+            for(int col = 30; col < 35; col++)
+            {
+                // in this example, an alive cell has a non-null actor and a dead cell has a null actor
+                Actor cell = game.getActor(row, col);
+
+                // if the cell at the current row and col should be alive, assert that the actor is not null
+                if(     (row == 27 && col == 31) ||
+                        (row == 27 && col == 34) ||
+                        (row == 28 && col == 30) ||
+                        (row == 28 && col == 32) ||
+                        (row == 29 && col == 30) ||
+                        (row == 29 && col == 31) )
+                       
+                {
+                    assertNotNull("expected alive cell at (" + row + ", " + col + ")", cell);
+                }
+                else // else, the cell should be dead; assert that the actor is null
+                {
+                    assertNull("expected dead cell at (" + row + ", " + col + ")", cell);
+                }
+            }
+        }
+        
+        
     }
+
 }
+
 
